@@ -12,7 +12,54 @@
     text-align: center;
     z-index: 10;
 }
-  
+
+.card-img-top {
+    width: 100%; 
+    height: 450px; 
+    object-fit: cover; 
+}
+
+.triceps-title {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 40px;
+  }
+
+  .triceps-title h1 {
+    font-size: 2rem;
+  }
+
+  .triceps-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .triceps-img img {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .triceps-text {
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    margin: 0 auto 150px auto; 
+    padding: 0 15px;
+    text-align: justify;
+  }
+
+  .triceps-text p {
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+.anchor {
+    text-decoration: none;
+    color:#030000;
+}
+
 .footer-container {
     margin: 0; 
     padding: 0; 

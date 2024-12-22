@@ -8,14 +8,23 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
-app.get("/about", (req, res) => {
-  res.render("about.ejs");
-});
-app.get("/contact", (req, res) => {
-  res.render("contact.ejs");
+
+app.get("/fit1", (req, res) => {
+  res.render("fit1.ejs");
 });
 
-// Step 4: Add the partials to the about and contact pages to show the header and footer on those pages. */
+app.get("/fit2", (req, res) => {
+  res.render("fit2.ejs");
+});
+
+app.get("/fit3", (req, res) => {
+  res.render("fit3.ejs");
+});
+
+app.get("/fit4", (req, res) => {
+  res.render("fit4.ejs");
+});
+
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
