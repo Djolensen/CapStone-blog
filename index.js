@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+app.get("/create-post", (req, res) => {
+  res.render("form.ejs");
+});
+
 app.get("/fit1", (req, res) => {
   res.render("fit1.ejs");
 });
