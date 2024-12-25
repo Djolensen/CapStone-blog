@@ -7,10 +7,10 @@
 </button></a>
 <div class="container">
 <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col" >
+  <div class="col" id="number1">
     <a href="/fit1" class="anchor">
     <div class="card">
-      
+
       <img src="/images/fit1.jpg" class="card-img-top" alt="..." >
       <div class="card-body">
         <h5 class="card-title">Triceps exercises</h5>
@@ -19,7 +19,7 @@
     </div>
     </a>
   </div>
-  <div class="col">
+  <div class="col" id="number2">
     <a href="/fit2" class="anchor">
     <div class="card">
       <img src="/images/fit2.jpg" class="card-img-top" alt="...">
@@ -30,7 +30,7 @@
     </div>
     </a>
   </div>
-  <div class="col">
+  <div class="col" id="number3">
     <a href="/fit3" class="anchor">
     <div class="card">
       <img src="/images/fit3.jpeg" class="card-img-top" alt="...">
@@ -41,7 +41,7 @@
     </div>
     </a>
   </div>
-  <div class="col">
+  <div class="col" id="number4">
     <a href="/fit4" class="anchor">
     <div class="card">
       <img src="/images/fit4.jpg" class="card-img-top" alt="...">
@@ -52,28 +52,21 @@
     </div>
     </a>
   </div>
+  <% if(locals.cards) { %>
+    <% cards.forEach(card => { %> 
   <div class="col">
     <a href="/fit4" class="anchor">
     <div class="card">
-      <img src="/images/fit4.jpg" class="card-img-top" alt="...">
+      <img src="/images/fit4.jpg" class="card-img-top" alt="..."> 
       <div class="card-body">
-        <h5 class="card-title">Best exercises for bulging biceps</h5>
-        <p class="card-text">Biceps curls and chin-ups build size and definition.</p>
+        <h5 class="card-title"><%=card.heading%></h5>
+        <p class="card-text"><%=card.textarea%></p>
       </div>
     </div>
     </a>
   </div>
-  <div class="col">
-    <a href="/fit4" class="anchor">
-    <div class="card">
-      <img src="/images/fit4.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Best exercises for bulging biceps</h5>
-        <p class="card-text">Biceps curls and chin-ups build size and definition.</p>
-      </div>
-    </div>
-    </a>
-  </div>
+  <% }); %>
+  <% } %>
 </div>
 </div>
 </div>
