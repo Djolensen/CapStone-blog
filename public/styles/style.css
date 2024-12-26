@@ -124,8 +124,15 @@
   }
   
   
-  
-  
+ .delete-button {
+  background-color: #68ade2 !important;
+  border: 2px solid #68ade2 !important;
+ } 
+
+ .delete-button:hover {
+  background-color: #FC931D !important;
+    border-color: #FC931D !important;
+ }
 
 .no-underline {
     text-decoration: none;

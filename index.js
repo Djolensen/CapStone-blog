@@ -1,12 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import methodOverride from "method-override";
 const app = express();
 const port = 3000;
 
 const cards = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 app.use(express.static("public"));
 
@@ -41,7 +42,11 @@ app.post("/submit", (req, res) => {
   res.render("index.ejs", {cards});
 });
 
-
+app.post("/delete-post/:id", (req, res) => {
+  const {id} = req.params;
+  cards.splice(id, 1);
+  res.redirect("/");
+})
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

@@ -53,7 +53,7 @@
     </a>
   </div>
   <% if(locals.cards) { %>
-    <% cards.forEach(card => { %> 
+    <% cards.forEach((card, index) => { %> 
   <div class="col">
     <a href="/fit4" class="anchor">
     <div class="card">
@@ -61,6 +61,10 @@
       <div class="card-body">
         <h5 class="card-title"><%=card.heading%></h5>
         <p class="card-text"><%=card.textarea%></p>
+
+        <form action="/delete-post/index" method="POST">
+            <button type="submit" class="btn btn-danger delete-button">Delete post</button>
+        </form>
       </div>
     </div>
     </a>
