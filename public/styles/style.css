@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+  overflow-x: hidden; 
+}
+ 
  footer {
     position: fixed;
     bottom: 0;
@@ -13,6 +20,8 @@
     z-index: 10;
 }
 
+
+
 .create-post {
     margin: 0 auto;
     display: flex;
@@ -23,7 +32,7 @@
 
  
 .form-container {
-    width: 400px;
+    width: 50%;
     background-color: #68ade2;
     border: 2px solid transparent;
     padding: 32px 24px;
@@ -161,6 +170,11 @@ button {
     border: 2px solid #FC931D;
   }
 
+  .card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .card-img-top {
     width: 100%; 
     height: 450px; 
@@ -227,60 +241,55 @@ button {
     margin-top: 100px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 .header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0px 20px;
-    background-color: #68ade2; 
-    animation: slideInDown 1s ease-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #68ade2;
+  animation: slideInDown 1s ease-out;
 }
 
 .header-logo img {
-    height: 300px; 
-    width: auto; 
+  max-height: 200px; 
+  width: auto; 
 }
 
+
 .header-nav ul {
-    display: flex;
-    gap: 80px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .header-nav ul li a {
-    text-decoration: none;
-    font-size: 22px;
-    color: #333;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
+  text-decoration: none;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
 }
 
 .header-nav ul li a:hover {
-    color: #FC931D;
+  color: #FC931D;
 }
 
 .header-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #FC931D;
-    transition: width 0.3s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #FC931D;
+  transition: width 0.3s;
 }
 
 .header-nav ul li a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 
@@ -319,4 +328,132 @@ footer p {
     to {
         opacity: 1;
     }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .header-logo img {
+    max-height: 120px; 
+  }
+
+  .header-nav ul li a {
+    font-size: 18px; 
+  }
+
+  .create-post {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    height: 300px;
+  }
+
+  .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+ 
+  .row-cols-1 .col {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .header-nav ul {
+    gap: 40px; 
+  }
+  .row-cols-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 901px) {
+  .row-cols-md-2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card-img-top {
+    height: 450px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  
+  
+
+  .header-nav ul {
+    gap: 10px; 
+  }
+
+  .header-nav ul li a {
+    font-size: 14px; 
+  }
+
+  .header-logo img {
+    max-height: 100px; 
+  }
+
+  
+  .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    height: 60px; 
+  }
+
+  .card-body h5 {
+    font-size: 1rem; 
+  }
+
+  .card-body p {
+    font-size: 0.8rem; 
+  }
+
+  .card-img-top {
+    height: 200px; 
+  }
+
+  .create-post {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5em;
+  }
+
+  
+  .row-cols-1 .col {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    height: 60px;
+  }
 }
